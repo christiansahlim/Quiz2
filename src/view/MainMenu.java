@@ -47,7 +47,7 @@ public class MainMenu implements ActionListener {
         btnLogin.setBounds(110, 200, 220, 60);
         btnLogin.setFont(new Font("Arial", Font.BOLD, 20));
         btnData = new JButton("Lihat Data");
-        btnData.setBounds(110, 200, 220, 60);
+        btnData.setBounds(110, 320, 220, 60);
         btnData.setFont(new Font("Arial", Font.BOLD, 20));
         btnExit = new JButton("Exit");
         btnExit.setBounds(110, 320, 220, 60);
