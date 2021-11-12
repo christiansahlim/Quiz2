@@ -63,7 +63,7 @@ public class RegisterForm {
         cbCategory.setBounds(1, 400, 300, 50);
 
         JButton btnRegister = new JButton("Register");
-        btnRegister.setBounds(200, 500, 120, 50);
+        btnRegister.setBounds(0, 500, 120, 50);
 
         JButton btnBack = new JButton("Back");
         btnRegister.setBounds(200, 500, 120, 50);
@@ -88,7 +88,7 @@ public class RegisterForm {
             public void actionPerformed(ActionEvent e) {
                 boolean result = controller.getUser();
                 if (result) {
-                    controller.insertData();
+                    Controller.insertData();
                     fRegister.dispose();
                     new MainMenu();
                 }
