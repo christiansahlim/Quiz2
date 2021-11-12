@@ -43,7 +43,7 @@ public class Controller {
     // SELECT WHERE
     public static User getUser(String email, String password) {
         conn.connect();
-        String query = "SELECT * FROM User WHERE email='" + email + "' AND password='" + password +"'";
+        String query = "SELECT * FROM User WHERE email='" + email + "' AND password='" + password + "'";
         try {
             Statement stmt = conn.con.createStatement();
             ResultSet result = stmt.executeQuery(query);
@@ -57,7 +57,29 @@ public class Controller {
                 user.setIdCategory(result.getInt("idCategory"));
             }
             return user;
-        }catch(SQLException e){
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static User InsertData(String name, String email, String password, int idCategory) {
+        conn.connect();
+        String query = "Insert INTO user(name,email,password,idCategory) Values('" + name + "','" + email + "','" + password + "','" + idCategory + "')'";
+        try {
+            Statement stmt = conn.con.createStatement();
+            ResultSet result = stmt.executeQuery(query);
+            User user = new User();
+
+            while (result.next()) {
+                user.setId(result.getInt("id"));
+                user.setName(result.getString("name"));
+                user.setEmail(result.getString("email"));
+                user.setPassword(result.getString("Password"));
+                user.setIdCategory(result.getInt("idCategory"));
+            }
+            return user;
+        } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
