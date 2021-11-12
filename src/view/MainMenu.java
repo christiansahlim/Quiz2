@@ -55,6 +55,7 @@ public class MainMenu implements ActionListener {
 
         btnRegister.addActionListener(this);
         btnLogin.addActionListener(this);
+        btnData.addActionListener(this);
         btnExit.addActionListener(this);
 
         //Add
@@ -76,7 +77,7 @@ public class MainMenu implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
         switch (command) {
-            case "LogIn":
+            case "Login":
                 User user = null;
                 new LoginForm();
                 break;
