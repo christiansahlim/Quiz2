@@ -86,9 +86,9 @@ public class RegisterForm {
         btnRegister.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean result = controller.getUser();
+                boolean result = Controller.getUser();
                 if (result) {
-                    controller.insertData();
+                    Controller.insertData();
                     fRegister.dispose();
                     new MainMenu();
                 }
