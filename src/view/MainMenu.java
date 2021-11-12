@@ -7,8 +7,10 @@ package view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -33,6 +35,9 @@ public class MainMenu implements ActionListener {
         panel = new JPanel();
         panel.setSize(450, 550);
         panel.setBackground(new Color(255, 249, 232));
+        
+        ImageIcon logo = new ImageIcon("src\\source\\panah.jng");
+        Image scaleImage = logo.getImage().getScaledInstance(150, 150,Image.SCALE_SMOOTH);
 
         //Button
         btnRegister = new JButton("Register");
